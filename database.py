@@ -17,6 +17,25 @@ port_id = os.environ.get("DB_PORT")
 conn = None
 cur = None
 
+# try:
+#     conn = psycopg2.connect(
+#         host=hostname,
+#         dbname=database,
+#         user=username,
+#         password=pwd,
+#         port=port_id)
+#     cur = conn.cursor(cursor_factory = psycopg2.extras.RealDictCursor)
+
+# except Exception as error:
+#     print(error)
+
+# finally:
+#     if cur is not None:
+#         cur.close()
+#     if conn is not None:
+#         conn.close()
+
+
 def select_all_wells():
     try:
         conn = psycopg2.connect(

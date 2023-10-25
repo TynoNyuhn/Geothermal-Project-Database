@@ -1,7 +1,7 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS, cross_origin
 import database
-import json
+
 
 app = Flask(__name__)
 cors = CORS(app)
@@ -48,5 +48,4 @@ def get_all_wells():
     return jsonify(wells_json), 200
 
 if (__name__) == "__main__":
-    print(5)
     app.run(debug=True)
